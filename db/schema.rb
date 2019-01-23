@@ -42,5 +42,8 @@ ActiveRecord::Schema.define(version: 2019_01_22_185837) do
     t.datetime "updated_at", null: false
     t.index ["cocktails_id"], name: "index_reviews_on_cocktails_id"
   end
+  add_foreign_key "doses", "cocktails"
+  add_foreign_key "doses", "ingredients"
+  add_foreign_key "reviews", "cocktails"
 
 end
