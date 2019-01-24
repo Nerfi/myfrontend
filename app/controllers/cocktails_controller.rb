@@ -6,7 +6,8 @@ class CocktailsController < ApplicationController
 
 
   def show
-    @cocktail = Cocktail.find(params[:id])
+    #Si añadimos la `s` parece que funciona, pero en el ejemplo es sin `s`, mirar lo que pasa
+    @cocktails = Cocktail.find(params[:id])
     @dose = Dose.new
     @review = Review.new
 
